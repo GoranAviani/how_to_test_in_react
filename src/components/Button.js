@@ -5,11 +5,11 @@ const Button = () => {
 
     return (
         <div>
-            <button onClick={() => {
+            <button data-testid="button" onClick={() => {
                 setShowSecondButton(true)
             }}>First button
             </button>
-            {showSecondButton && <button>Second button</button>}
+            {showSecondButton && <button data-testid="button">Second button</button>}
             <br/>
             State: {showSecondButton.toString()}
         </div>
