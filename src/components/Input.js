@@ -3,9 +3,11 @@ import React, {useState} from "react";
 const Input = () => {
     const [userInput, setUserInput] = useState('')
 
-    return(
+    return (
         <div>
-            <input onChange={(e)=>{setUserInput(e.target.value)}}/>
+            <input onChange={(e) => {
+                setUserInput(e.target.value)
+            }}/>
             <br/>
             {userInput}
         </div>
