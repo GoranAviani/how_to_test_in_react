@@ -6,10 +6,23 @@ describe("button component test", () => {
         it("rendered button", () => {
             const {getByTestId} = render(<Button/>)
             const button = getByTestId("button")
-            expect(input).toBeTruthy()
+            expect(button).toBeTruthy()
         })
 
-        it("render second button", ()=>{
+        it("render one button before click", () => {
+            const {getAllByTestId} = render(<Button/>)
+            const buttonArray = getAllByTestId("button")
+            expect(buttonArray).toHavelength(1)
+        })
+
+        it("render two buttons after click", () => {
+            act(async () => {
+                const {getAllByTestId} = render(<Button/>)
+                const buttonArray = getAllByTestId("button")
+                await fireEvent.click(buttonArray[0])
+                expect(buttonArray).toHavelength(2)
+
+            })
 
         })
     }
