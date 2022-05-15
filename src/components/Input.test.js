@@ -26,8 +26,8 @@ describe("input component test", () => {
 
     it("change on input causes change on header",  () => {
         act(async () => {
-            const {getByTestId} = render(<Input showDiv={false}/>)
-            const input = getByTestId("search-bar")
+                    const {getByTestId} = render(<Input showDiv={false}/>)
+        const input = getByTestId("search-bar")
             const header = getByTestId("display-search")
 
             const userInput = "Oliver"
