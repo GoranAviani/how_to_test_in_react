@@ -4,7 +4,7 @@ import Button from "./Button";
 describe("button component test", () => {
 
         it("rendered button", () => {
-            const {getByTestId} = render(<Input showDiv={false}/>)
+            const {getByTestId} = render(<Button/>)
             const input = getByTestId("button")
             expect(input).toBeTruthy()
         })
