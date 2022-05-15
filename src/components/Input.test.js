@@ -25,14 +25,19 @@ describe("input component test", () => {
 
 
     it("change on input causes change on header", () => {
-        const {getByTestId} = render(<Input showDiv={false}/>)
+        act(async()=>{
+            const {getByTestId} = render(<Input showDiv={false}/>)
         const input = getByTestId("search-bar")
         const header = getByTestId("display-search")
 
         const userInput = "Oliver"
-        fireEvent.change(input, {target: {value: userInput}})
+        await fireEvent.change(input, {target: {value: userInput}})
 
         expect(header.innerHtml).toBe(userInput)
+
+
+        })
+
 
 
     })
