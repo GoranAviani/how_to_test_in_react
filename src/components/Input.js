@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const Input = () => {
+const Input = ({showDiv}) => {
     const [userInput, setUserInput] = useState('')
 
     return (
@@ -13,7 +13,9 @@ const Input = () => {
             <br/>
             <h2 data-test-id="display-seaerch">{userInput}</h2>
             <br/>
-            <div data-testid="greeting-test">How to test in react</div>
+            {showDiv && (
+                <div data-testid="greeting-test">How to test in react</div>
+            )}
         </div>
     )
 
