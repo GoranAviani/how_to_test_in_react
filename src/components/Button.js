@@ -1,5 +1,4 @@
-import React from "react";
-import {useState} from "react";
+import React, {useState}  from "react";
 
 const Button = () => {
 const [showSecondButton, setShowSecondButton] = useState(false)
