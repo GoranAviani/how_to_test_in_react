@@ -11,7 +11,7 @@ const Input = () => {
                 setUserInput(e.target.value)
             }}/>
             <br/>
-            {userInput}
+            <h2 data-test-id="display-seaerch">{userInput}</h2>
         </div>
     )
 
