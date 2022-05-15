@@ -1,9 +1,9 @@
 import {getByTestId, render} from '@testing-library/react'
 import Input from "./Input";
 
-describe("input component test", ()=>{
+describe("input component test", () => {
 
-    it("rendered input", ()=>{
+    it("rendered input", () => {
         const {getByTestId} = render(<Input showDiv={false}/>)
         const input = getByTestId("search-bar")
         expect(input).toBeInTheDocument()
@@ -11,8 +11,8 @@ describe("input component test", ()=>{
     })
 
 
-    it("render div", ()=>{
-        const {getByTestId} = render(<Input showDiv={true}/> )
+    it("render div", () => {
+        const {getByTestId} = render(<Input showDiv={true}/>)
         const greetingText = getByTestId("greeting-test")
         expect(greetingText).toBeInTheDocument()
     })
