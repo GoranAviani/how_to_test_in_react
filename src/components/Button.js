@@ -1,11 +1,14 @@
-import React, {useState}  from "react";
+import React, {useState} from "react";
 
 const Button = () => {
-const [showSecondButton, setShowSecondButton] = useState(false)
+    const [showSecondButton, setShowSecondButton] = useState(false)
 
     return (
         <div>
-            <button onClick={()=>{setShowSecondButton(true)}}>First button</button>
+            <button onClick={() => {
+                setShowSecondButton(true)
+            }}>First button
+            </button>
             {showSecondButton && <button>Second button</button>}
             <br/>
             State: {showSecondButton.toString()}
