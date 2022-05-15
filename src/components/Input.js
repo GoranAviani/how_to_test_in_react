@@ -5,7 +5,9 @@ const Input = () => {
 
     return (
         <div>
-            <input onChange={(e) => {
+            <input data-testid="search-bar"
+                   placeholder="search..."
+                   onChange={(e) => {
                 setUserInput(e.target.value)
             }}/>
             <br/>
