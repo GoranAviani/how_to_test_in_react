@@ -17,5 +17,10 @@ describe("input component test", () => {
         expect(greetingText).toBeInTheDocument()
     })
 
+    it("dont render div", () => {
+        const {getByTestId} = render ( <Input showDiv={false}/> )
+        const greetingText = getByTestId("greeting-test")
+        expect(greetingText).not.toBeTruthy()
+    })
 
 })
