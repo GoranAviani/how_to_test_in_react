@@ -23,7 +23,7 @@ describe("input component test", () => {
         expect(greetingText).toBeFalsy()
     })
 
-
+    /*
     it("change on input causes change on header",  () => {
         act(async () => {
                     const {getByTestId} = render(<Input showDiv={false}/>)
@@ -38,5 +38,5 @@ describe("input component test", () => {
 
 
     })
-
+*/
 })
