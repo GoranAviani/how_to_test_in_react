@@ -18,23 +18,21 @@ describe("input component test", () => {
     })
 
     it("dont render div", () => {
-        const {queryByTestId} = render ( <Input showDiv={false}/> )
+        const {queryByTestId} = render(<Input showDiv={false}/>)
         const greetingText = queryByTestId("greeting-test")
         expect(greetingText).toBeFalsy()
     })
 
 
-    it("change on input causes change on header", ()=> {
-            const {getByTestId} = render(<Input showDiv={false} /> )
-            const input = getByTestId("search-bar")
-                    const header = getByTestId("display-search")
+    it("change on input causes change on header", () => {
+        const {getByTestId} = render(<Input showDiv={false}/>)
+        const input = getByTestId("search-bar")
+        const header = getByTestId("display-search")
 
-            const userInput = "Oliver"
-            fireEvent.change(input, {target: {value: userInput}})
+        const userInput = "Oliver"
+        fireEvent.change(input, {target: {value: userInput}})
 
-            expect(header.innerHtml).toBe(userInput)
-
-
+        expect(header.innerHtml).toBe(userInput)
 
 
     })
