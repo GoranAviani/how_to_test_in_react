@@ -1,4 +1,4 @@
-import {getByTestId, render} from '@testing-library/react'
+import {getByTestId, queryByTestId, render} from '@testing-library/react'
 import Input from "./Input";
 
 describe("input component test", () => {
@@ -14,13 +14,13 @@ describe("input component test", () => {
     it("render div", () => {
         const {getByTestId} = render(<Input showDiv={true}/>)
         const greetingText = getByTestId("greeting-test")
-        expect(greetingText).toBeInTheDocument()
+        expect(greetingText).toBeTruthy()
     })
 
     it("dont render div", () => {
-        const {getByTestId} = render ( <Input showDiv={false}/> )
-        const greetingText = getByTestId("greeting-test")
-        expect(greetingText).not.toBeTruthy()
+        const {queryByTestId} = render ( <Input showDiv={false}/> )
+        const greetingText = queryByTestId("greeting-test")
+        expect(greetingText).toBeFalsy()
     })
 
 })
