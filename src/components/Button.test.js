@@ -5,10 +5,12 @@ describe("button component test", () => {
 
         it("rendered button", () => {
             const {getByTestId} = render(<Button/>)
-            const input = getByTestId("button")
+            const button = getByTestId("button")
             expect(input).toBeTruthy()
         })
 
+        it("render second button", ()=>{
 
+        })
     }
 )
