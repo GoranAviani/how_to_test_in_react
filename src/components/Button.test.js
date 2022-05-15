@@ -3,11 +3,12 @@ import Button from "./Button";
 
 describe("button component test", () => {
 
-    it("rendered button", () => {
-        const {getByTestId} = render(<Input showDiv={false}/>)
-        const input = getByTestId("button")
-        expect(input).toBeTruthy()
+        it("rendered button", () => {
+            const {getByTestId} = render(<Input showDiv={false}/>)
+            const input = getByTestId("button")
+            expect(input).toBeTruthy()
+        })
 
-    })
 
+    }
 )
